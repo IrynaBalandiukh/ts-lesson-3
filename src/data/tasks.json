@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "title": "Design login page",
+    "description": "Create the UI/UX design for the login page using Figma.",
+    "createdAt": "2025-09-25T19:50:23.440Z",
+    "priority": "high"
+  },
+  {
+    "id": 2,
+    "title": "Implement authentication",
+    "createdAt": "2025-09-26T19:50:23.440Z",
+    "status": "in_progress",
+    "priority": "high"
+  },
+  {
+    "id": 3,
+    "title": "Setup CI/CD pipeline",
+    "description": "Configure GitHub Actions for automated testing and deployment.",
+    "createdAt": "2025-09-27T19:50:23.440Z",
+    "status": "done",
+    "priority": "medium",
+    "deadline": "2025-10-04T19:50:23.440Z"
+  },
+  {
+    "id": 4,
+    "title": "Write documentation",
+    "description": "Prepare detailed README and setup guide for new developers.",
+    "createdAt": "2025-09-28T19:50:23.440Z",
+    "status": "todo",
+    "priority": "low",
+    "deadline": "2025-10-19T19:50:23.440Z"
+  },
+  {
+    "id": 5,
+    "title": "Optimize database queries",
+    "description": "Analyze and optimize slow SQL queries in reports module.",
+    "createdAt": "2025-09-29T19:50:23.440Z",
+    "status": "in_progress",
+    "priority": "high"
+  },
+  {
+    "id": 6,
+    "title": "Implement dark mode",
+    "description": "Add theme toggle functionality and persist user preference.",
+    "createdAt": "2025-09-30T19:50:23.440Z",
+    "status": "todo",
+    "priority": "medium",
+    "deadline": "2025-10-15T19:50:23.440Z"
+  },
+  {
+    "id": 7,
+    "title": "Fix navigation bugs",
+    "description": "Resolve broken links and navigation issues on mobile.",
+    "createdAt": "2025-10-01T19:50:23.440Z",
+    "status": "in_progress",
+    "priority": "medium",
+    "deadline": "2025-10-07T19:50:23.440Z"
+  },
+  {
+    "id": 8,
+    "title": "Refactor Redux state management",
+    "createdAt": "2025-10-02T19:50:23.440Z",
+    "status": "todo",
+    "priority": "high"
+  },
+  {
+    "id": 9,
+    "title": "Add unit tests for API calls",
+    "description": "Write Jest tests for all service API endpoints.",
+    "createdAt": "2025-10-03T19:50:23.440Z",
+    "deadline": "2025-10-04T19:50:23.440Z"
+  },
+  {
+    "id": 10,
+    "title": "Deploy new version",
+    "description": "Deploy version 2.3.0 to production and monitor performance.",
+    "createdAt": "2025-10-04T19:50:23.440Z",
+    "status": "done",
+    "priority": "high"
+  }
+]
