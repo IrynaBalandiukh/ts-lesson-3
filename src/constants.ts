@@ -9,9 +9,3 @@ export const PRIORITIES = {
   MEDIUM: "medium",
   HIGH: "high",
 } as const;
-
-export const FILTER_OPTIONS = {
-  CREATED_AT: "createdAt",
-  PRIORITY: "priority",
-  STATUS: "status",
-} as const;

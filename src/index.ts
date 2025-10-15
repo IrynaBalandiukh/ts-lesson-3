@@ -1,4 +1,4 @@
-import { FILTER_OPTIONS, PRIORITIES, STATUSES } from "./constants";
+import { PRIORITIES, STATUSES } from "./constants";
 import tasks from "./data/tasks.json";
 import {
   createTask,
@@ -7,7 +7,7 @@ import {
   getTaskById,
   isCompletedBeforeDeadline,
   updateTask,
-} from "./utils/helpers";
+} from "./utils/taskUtils";
 import { validateTasks } from "./utils/validateTasks";
 
 const validatedTasks = validateTasks(tasks);
@@ -27,26 +27,16 @@ console.log("updatedTaskById", updatedTaskById);
 const tasksAfterDeletion = deleteTask(validatedTasks, 1);
 console.log("tasksAfterDeletion", tasksAfterDeletion);
 
-const filteredByStatus = filterTasks(
-  validatedTasks,
-  FILTER_OPTIONS.STATUS,
-  STATUSES.DONE
-);
+const filteredByStatus = filterTasks(validatedTasks, { status: STATUSES.DONE });
 console.log("Tasks filtered by status done:", filteredByStatus);
 
-const filteredByPriority = filterTasks(
-  validatedTasks,
-  FILTER_OPTIONS.PRIORITY,
-  PRIORITIES.HIGH
-);
+const filteredByPriority = filterTasks(validatedTasks, {
+  priority: PRIORITIES.HIGH,
+});
 console.log("Tasks filtered by priority high:", filteredByPriority);
 
 const filterDate = new Date("2025-09-28");
-const filteredByDate = filterTasks(
-  validatedTasks,
-  FILTER_OPTIONS.CREATED_AT,
-  filterDate
-);
+const filteredByDate = filterTasks(validatedTasks, { createdAt: filterDate });
 console.log("Tasks filtered by createdAt 2025-09-28:", filteredByDate);
 
 const taskToCheck = validatedTasks[8];

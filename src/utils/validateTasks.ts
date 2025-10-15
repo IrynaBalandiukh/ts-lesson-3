@@ -1,16 +1,6 @@
 import { STATUSES, PRIORITIES } from "../constants";
 import type { Task, Status, Priority } from "../dto/Task.ts";
-
-const statusValues = Object.values(STATUSES) as readonly Status[];
-const priorityValues = Object.values(PRIORITIES) as readonly Priority[];
-
-const isStatus = (value: unknown): value is Status =>
-  statusValues.includes(value as Status);
-const isPriority = (value: unknown): value is Priority =>
-  priorityValues.includes(value as Priority);
-
-const isString = (value: unknown): value is string => typeof value === "string";
-const isNumber = (value: unknown): value is number => typeof value === "number";
+import { isNumber, isPriority, isStatus, isString } from "./helpers";
 
 function normalizeTask(task: any, index: number): Task {
   const hasValidBase =
