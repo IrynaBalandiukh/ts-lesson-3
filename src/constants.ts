@@ -9,3 +9,11 @@ export const PRIORITIES = {
   MEDIUM: "medium",
   HIGH: "high",
 } as const;
+
+export const ISSUE_TYPES = {
+  TASK: "Task",
+  SUBTASK: "Subtask",
+  BUG: "Bug",
+  STORY: "Story",
+  EPIC: "Epic",
+};

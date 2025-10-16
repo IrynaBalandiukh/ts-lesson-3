@@ -1,5 +1,5 @@
 import { PRIORITIES, STATUSES } from "../constants";
-import type { Priority, Status } from "../dto/Task";
+import type { Priority, Status } from "../modules/tasks/task.types";
 
 const statusValues = Object.values(STATUSES) as readonly Status[];
 const priorityValues = Object.values(PRIORITIES) as readonly Priority[];

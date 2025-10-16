@@ -1,8 +1,8 @@
 import { STATUSES, PRIORITIES } from "../constants";
-import type { Task, Status, Priority } from "../dto/Task.ts";
+import type { TaskDTO, Status, Priority } from "../modules/tasks/task.types";
 import { isNumber, isPriority, isStatus, isString } from "./helpers";
 
-function normalizeTask(task: any, index: number): Task {
+function normalizeTask(task: any, index: number): TaskDTO {
   const hasValidBase =
     isNumber(task?.id) &&
     isString(task?.title) &&
@@ -40,7 +40,7 @@ function normalizeTask(task: any, index: number): Task {
   };
 }
 
-export function validateTasks(data: unknown): Task[] {
+export function validateTasks(data: unknown): TaskDTO[] {
   if (!Array.isArray(data)) {
     console.warn("Invalid data format in JSON.");
     return [];
