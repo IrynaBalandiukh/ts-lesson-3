@@ -5,6 +5,7 @@ import {
   Status,
   TaskDTO,
 } from "../modules/tasks/task.types";
+import { validateTask } from "../utils/validateTask";
 
 export class TaskBase {
   id: number;
@@ -24,29 +25,15 @@ export class TaskBase {
     priority,
     deadline,
   }: TaskDTO) {
-    if (id <= 0) {
-      throw new Error("id must be a positive number");
-    }
-
-    if (title.trim() === "") {
-      throw new Error("title cannot be empty");
-    }
-
-    const createdDateOnly = new Date(
-      createdAt.getFullYear(),
-      createdAt.getMonth(),
-      createdAt.getDate()
-    );
-
-    const todayDateOnly = new Date(
-      new Date().getFullYear(),
-      new Date().getMonth(),
-      new Date().getDate()
-    );
-
-    if (createdDateOnly < todayDateOnly) {
-      throw new Error("Task cannot be created with a past date");
-    }
+    validateTask({
+      id,
+      title,
+      createdAt,
+      description,
+      status,
+      priority,
+      deadline,
+    });
 
     this.id = id;
     this.title = title.trim();
