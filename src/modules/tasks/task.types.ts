@@ -13,6 +13,24 @@ export type TaskDTO = {
   status?: Status;
   priority?: Priority;
   deadline?: Date;
+
+  type?: IssueType;
+
+  // Subtask
+  parentId?: number;
+  isBlocked?: boolean;
+
+  // Story
+  storyPoints?: number;
+  businessValue?: number;
+
+  // Epic
+  owner?: string;
+  releaseDate?: Date;
+
+  // Bug
+  environment?: string;
+  stepsToReproduce?: string;
 };
 
 export type CreateTaskInput = Omit<TaskDTO, "id" | "createdAt">;
